@@ -1,0 +1,110 @@
+<div class="recipeEdit">
+  
+      
+            <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+             
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                          <label for="name"></label>
+                          <input 
+                          type="name"
+                          placeholder="Name"
+                          autofocus
+                          id="name"
+                          formControlName="name"
+                          class="form-control">
+                      </div>
+                </div> 
+              </div>
+            
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label for="imagePath"></label>
+                    <input 
+                    type="text" 
+                    placeholder="Image URL link"
+                    id="imagePath"
+                    formControlName="imagePath"
+                    class="form-control"
+                    #imagePath>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="row">
+                <div class="col-xs-6">
+                <img 
+                  [src]="imagePath.value" 
+                  class="img-responsive" 
+                  style="max-height: 150px;">
+                </div>
+      
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <label for="description"></label>
+                    <textarea 
+                    placeholder="Enter Description"
+                    type="text" 
+                    id="description"
+                    class="form-control"
+                    formControlName="description"
+                    rows="6"></textarea>
+                  </div>
+                </div>
+              </div>
+        
+               
+              <div class="row">
+                <div class="col-xs-12" formArrayName="ingredients">
+                  <div 
+                    class="row"
+                    *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index"
+                    [formGroupName]="i"
+                    style="margin-top: 10px;">
+                    <div class="col-xs-7">
+                      <input 
+                        type="text" 
+                        placeholder="Ingredient"
+                        class="form-control"
+                        formControlName="name">
+                    </div>
+                    <div class="col-xs-3">
+                      <input 
+                        type="number" 
+                        class="form-control"
+                        placeholder="amount"
+                        formControlName="amount">
+                    </div>
+                    <div class="col-xs-2">
+                      <button class="btn btn-danger"
+                      (click)="onDeleteIngredient(i)"><span class="glyphicon glyphicon-trash"></span></button>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-xs-12 buttons">
+                      <button
+                        type="button"
+                        class="btn btn-success"
+                        (click)="onAddIngredient()"><span class="glyphicon glyphicon-plus"></span></button>
+
+                        <button 
+                        type="submit" 
+                        class="btn btn-success"
+                        [disabled]="!recipeForm.valid"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+
+                        <button 
+                        type="button" 
+                        class="btn btn-danger" 
+                        (click)="onCancel()"><span class="glyphicon glyphicon-remove"></span></button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+             </form>
+        
+ 
+</div>

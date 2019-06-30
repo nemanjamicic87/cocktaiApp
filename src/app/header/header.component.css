@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+}
+.navbar {
+    background: #ffffff;
+    border: none;
+}
+.navbar-brand {
+    padding: 0px;
+}
+img {
+    max-height: 50px; 
+}
+
+.navbar-nav>li>a>h4 {
+    margin-left: 10px;
+    color:#fe0067;
+}
+.navbar-default 
+.navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover{
+   
+    background-color: #ffffff;
+}
+
+.navbar-nav>.active>a>h4,
+.navbar-default .navbar-nav>.active>a>h4:focus, 
+.navbar-default .navbar-nav>.active>a>h4:hover{
+    transform: scale(1.1); 
+    transition: all 0.7s ease-in-out;
+}
+
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover{
+    font: scale(1.2);
+}
+.glyphicon-th-large{
+    font-size: large;
+    color:#fe0067;
+}

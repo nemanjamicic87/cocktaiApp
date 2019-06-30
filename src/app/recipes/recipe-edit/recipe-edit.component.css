@@ -1,0 +1,11 @@
+.recipeEdit{
+    margin-top: 20px;
+    padding: 30px;
+    background-color: white;
+}
+.buttons>button {
+    width: 30%;
+}
+.buttons>button:first-child, .buttons>button:nth-child(2) {
+    margin-right: 5%;
+}

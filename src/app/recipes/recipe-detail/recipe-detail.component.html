@@ -1,0 +1,52 @@
+<div class="recipe-detail">
+    <div class="row">
+        <div class="col-xs-6 desc">
+            <h1>{{ recept.name }}</h1>
+            <h4>{{ recept.description }}</h4>
+            <div class="row">
+                <div class="col-xs-12">
+                 <ul class="list-group">
+                   <li class="list-group-item"
+                   *ngFor="let ing of recept.ingredients"> <h5>{{ing.name}} ({{ing.amount}})</h5> </li>
+                   <h6>(*amounts are in 0.10 liter)</h6>
+                 </ul>
+                </div>
+              </div> 
+        </div>  
+        <div class="col-xs-6">
+          <img 
+            [src]="recept.imagePath" 
+            alt="{{ recept.name }}" 
+            class="img-responsive"
+            style="max-height:400px"> 
+        </div>
+       
+      </div>
+      
+      
+
+      <div class="row">
+          <div class="col-xs-12">
+            <div class="btn-group  dropup animated"
+            appDropdown>
+              <button 
+              type="button" 
+              class="btn btn-default dropdown-toggle"
+              data-toggle="dropdown" 
+              aria-haspopup="true" 
+              aria-expanded="false">
+              <span class="glyphicon glyphicon-th-large"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+
+            <ul class="dropdown-menu">
+              <li><a (click)="onAddToBasket()" style="cursor: pointer;">Send to bucket</a></li>
+              <li><a style="cursor: pointer;" (click)="onEditRecipe()">Edit Recipe</a></li>
+              <li><a style="cursor: pointer;" (click)="onDeleteRecipe()">Delete Recipe</a></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        
+            
+ 

@@ -1,0 +1,93 @@
+.recipe-detail{
+    margin-top:20px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+}
+h1 {
+    padding-top: 20%;
+}
+h4 {
+    font-style: italic;
+}
+h5 {
+    line-height: 0.1;
+}
+h6 {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.desc{
+    text-align: left;
+    padding-left: 10%;
+}
+.list-group-item{
+    border: none;
+    
+    
+}
+
+.btn-default {
+  color: #d81b1b;
+  background-color: transparent;
+  font-size: xx-large;
+  border: none;
+}
+.btn-default:active {
+  box-shadow: none;
+}
+.btn-group.open .dropdown-toggle {
+  box-shadow:none;
+}
+.btn-default.active, 
+.btn-default:active, 
+.open>.dropdown-toggle.btn-default {
+  background-color: white;
+  border-color: white;
+}
+
+.btn-group.animated > .btn {
+    transition: background-color 0.0625s cubic-bezier(.28, 0, 0.99, -0.01);
+  }
+  .btn-group.animated > .btn:hover {
+    transition: background-color 0.0625s cubic-bezier(0.28, 0, 0.99, -0.01);
+  }
+  .btn-group.animated > .dropdown-menu {
+    width: 0;
+    min-width: 100%;
+    overflow-y: hidden;
+    display: block;
+    top: 0;
+    z-index: -1;
+    transition: height 0.375s ease, width 0.375s ease, min-width 0.375s ease, opacity 0.125s ease 0.0625s, top 0.0625s ease 0.375s, bottom 1s ease 0.375s, z-index 1.375s ease;
+    opacity: 0;
+  }
+  .btn-group.animated > .dropdown-menu > li {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.125s ease, height 0.375s ease;
+  }
+  .btn-group.animated.open {
+    z-index: 1000;
+  }
+  .btn-group.animated.open > .dropdown-menu {
+    top: 100%;
+    width: 100%;
+    min-width: 160px;
+    transition: all 0.25s ease 0.25s;
+    opacity: 1;
+    z-index: 1000;
+  }
+  .btn-group.animated.open > .dropdown-menu > li {
+    height: 26px;
+    opacity: 1;
+    transition: opacity 0.25s ease, height 0.125s  ease;
+  }
+  .btn-group.animated.dropup > .dropdown-menu {
+    top: auto;
+    bottom: 0;
+  }
+  .btn-group.animated.dropup.open > .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+  }
